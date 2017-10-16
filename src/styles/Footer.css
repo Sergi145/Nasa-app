@@ -1,0 +1,14 @@
+footer p, footer ul {
+  text-align: center;
+  margin-top: 20px; }
+
+footer {
+  background-color: #040e9e;
+  color: rgb(255, 255, 255);
+  padding: 20px; }
+  @media (min-width: 500px) {
+    footer p {
+      text-align: right; } }
+  @media (min-width: 500px) {
+    footer ul {
+      text-align: left; } }

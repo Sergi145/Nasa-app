@@ -1,0 +1,16 @@
+#navbar{
+  background-color: #040e9e;
+  
+}
+
+.navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-brand {
+  color: red;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 20px;
+  
+}
+
+.navbar-inverse .navbar-brand {
+ font-size: 25px;
+ cursor: pointer;
+}
