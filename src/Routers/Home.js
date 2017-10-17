@@ -1,11 +1,6 @@
 import React from 'react'
-import { Grid, Row, Col,  Thumbnail }  from 'react-bootstrap'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
 
 import '../styles/Home.css'
-
-
 
 const Home = () => {
 	return (
@@ -25,7 +20,7 @@ const Home = () => {
 						<ul className="timeline">
 							<li>
 								<div className="timeline-image">
-									<img className="img-circle img-responsive" src="https://www.definicionabc.com/wp-content/uploads/biosfera-250x250.jpg" alt />
+									<img className="img-circle img-responsive" src="https://www.definicionabc.com/wp-content/uploads/biosfera-250x250.jpg" alt="" />
 								</div>
 								<div className="timeline-panel">
 									<div className="timeline-heading">
@@ -42,7 +37,7 @@ const Home = () => {
 							</li>
 							<li className="timeline-inverted">
 								<div className="timeline-image">
-									<img className="img-circle img-responsive" src="https://bdn-data.s3.amazonaws.com/uploads/2015/09/super-blood-moon-250x250.jpg?ref=relatedBox" alt />
+									<img className="img-circle img-responsive" src="https://bdn-data.s3.amazonaws.com/uploads/2015/09/super-blood-moon-250x250.jpg?ref=relatedBox" alt="" />
 								</div>
 								<div className="timeline-panel">
 									<div className="timeline-heading">
@@ -59,7 +54,7 @@ const Home = () => {
 							</li>
 							<li>
 								<div className="timeline-image">
-									<img className="img-circle img-responsive" src="http://www.solociencia.com/astronomia/11081202.jpg" alt />
+									<img className="img-circle img-responsive" src="http://www.solociencia.com/astronomia/11081202.jpg" alt="" />
 								</div>
 								<div className="timeline-panel">
 									<div className="timeline-heading">
@@ -76,7 +71,7 @@ const Home = () => {
 							</li>
 							<li className="timeline-inverted">
 								<div className="timeline-image">
-									<img className="img-circle img-responsive" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Pluto_by_LORRI_and_Ralph%2C_13_July_2015.jpg/250px-Pluto_by_LORRI_and_Ralph%2C_13_July_2015.jpg?w=240" alt />
+									<img className="img-circle img-responsive" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Pluto_by_LORRI_and_Ralph%2C_13_July_2015.jpg/250px-Pluto_by_LORRI_and_Ralph%2C_13_July_2015.jpg?w=240" alt="" />
 								</div>
 								<div className="timeline-panel">
 									<div className="timeline-heading">
@@ -93,7 +88,7 @@ const Home = () => {
 							</li>
 							<li>
 								<div className="timeline-image">
-									<img className="img-circle img-responsive" src="http://www.thewhitegoddess.co.uk/the_elements/the_planets/images/saturn.jpg" alt />
+									<img className="img-circle img-responsive" src="http://www.thewhitegoddess.co.uk/the_elements/the_planets/images/saturn.jpg" alt="" />
 								</div>
 								<div className="timeline-panel">
 									<div className="timeline-heading">
@@ -112,7 +107,7 @@ const Home = () => {
 				</div>
 			</div>
 		</div>
-	);
+	)
 }
 
 
