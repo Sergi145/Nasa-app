@@ -2,6 +2,7 @@ import React from 'react'
 
 
 const Asteroids = () => (
+	
 	<h1>Asteroids</h1>
 )
 

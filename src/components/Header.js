@@ -1,5 +1,6 @@
 import React from 'react'
-import imgSrc from '../Img/nasalogo.png'
+import { Link } from 'react-router-dom'
+
 
 import '../styles/Home.css'
 
@@ -14,15 +15,15 @@ const Header = () => (
 						<span className="icon-bar" />
 						<span className="icon-bar" />
 					</button>
-					<img src={imgSrc} className="img-rounded" alt="Cinque Terre" />
+					<img src= {require("../Img/nasalogo.png")} className="img-rounded" alt="Cinque Terre" />
 				</div>
 				<div className="collapse navbar-collapse" id="navbar1">
 					<ul className="nav navbar-nav">
-						<li><a href="#">Home</a></li>
-						<li><a href="#">Images Hubble</a></li>
-						<li><a href="#">Asteroid</a></li>
-						<li><a href="#">Images Curiosity</a></li>
-						<li><a href="#">Wallpapers</a></li>
+						<li><Link to="/">Home</Link></li>
+						<li><Link to="/image">Images Hubble</Link></li>
+						<li><Link to="/asteroid">Asteroids</Link></li>
+						<li><Link to="/curiosity">Curiosity</Link></li>
+						<li><Link to="/wallpaper">Search Wallpaper</Link></li>
 					</ul>
 				</div>
 			</div>
