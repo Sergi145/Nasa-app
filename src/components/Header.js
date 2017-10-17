@@ -1,33 +1,32 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
-import { LinkContainer } from 'react-router-bootstrap';
-import { Nav, NavItem, Navbar }  from 'react-bootstrap';
+import imgSrc from '../Img/nasalogo.png'
 
-import '../styles/Header.css'
+import '../styles/Home.css'
 
 const Header = () => (
-	<Navbar inverse collapseOnSelect id="navbar">
-		<Navbar.Header>
-			<LinkContainer to='/'>
-				<Navbar.Brand>Home</Navbar.Brand>
-			</LinkContainer>
-		</Navbar.Header>
-		<Navbar.Collapse>
-			<Nav>
-				<LinkContainer to='/image'>
-					<NavItem eventKey={1}>Images Hubble</NavItem>
-				</LinkContainer>
-				<LinkContainer to='/asteroid'>
-					<NavItem eventKey={2}>Asteroid</NavItem>
-				</LinkContainer>
-				<LinkContainer to='/curiosity'>
-					<NavItem eventKey={2} href="#">Images Curiosity</NavItem>
-				</LinkContainer>
-				<LinkContainer to='/wallpaper'>
-					<NavItem eventKey={2} href="#">Wallpapers</NavItem>
-				</LinkContainer>
-			</Nav>
-		</Navbar.Collapse>
-	</Navbar>
+	<header>
+		<nav className="navbar navbar-static-top navbar-inverse navbar">
+			<div className="container">
+				<div className="navbar-header">
+					<button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar1">
+						<span className="sr-only">Alternar menu</span>
+						<span className="icon-bar" />
+						<span className="icon-bar" />
+						<span className="icon-bar" />
+					</button>
+					<img src={imgSrc} className="img-rounded" alt="Cinque Terre" />
+				</div>
+				<div className="collapse navbar-collapse" id="navbar1">
+					<ul className="nav navbar-nav">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">Images Hubble</a></li>
+						<li><a href="#">Asteroid</a></li>
+						<li><a href="#">Images Curiosity</a></li>
+						<li><a href="#">Wallpapers</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header> 
 )
 export default Header
