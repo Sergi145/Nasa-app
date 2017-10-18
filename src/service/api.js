@@ -15,14 +15,11 @@ const apiKey = 'reR7Xu4UezP8ZOXz1zsjhdh6Cn5aJwxulUyRh13S'
 
 export const getImageHubble = (query) => {
 	const urlHubble = `https://api.nasa.gov/planetary/apod?date=${query}&api_key=${apiKey}`
+	// const urlFotoHubble = 'https://api.nasa.gov/planetary/apod?date=2017-09-15&api_key=reR7Xu4UezP8ZOXz1zsjhdh6Cn5aJwxulUyRh13S'
 	return axios.get(urlHubble)
 		.then((data => data.data ) )
 		
 }
 
 
-export const getAsterod=(query)=>{
-
-	const urlAsteroid=``
-}
 
