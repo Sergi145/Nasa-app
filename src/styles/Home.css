@@ -7,12 +7,15 @@
 .navbar{
 background-color: #0b3d91;
 
+
 }
 
 
 body{
 	background-image: url('../Img/moon.jpg');
 	background-size: cover;
+    font-family: 'Quantico', sans-serif;
+    text-align: justify;
 }
 
 a{
@@ -26,6 +29,10 @@ a:hover{
 	font-size: 23px;
 }
 
+#planet {
+
+  
+}
 
 img{
 	height: 60px;
@@ -34,6 +41,10 @@ img{
 
 h3{
 	color: white;
+}
+
+h2{
+  color: #ef3d43
 }
 
 .titulo{
@@ -330,4 +341,8 @@ footer {
   padding: 20px;
   margin-top: 15px;
 
+ }
+
+ #date{
+  font-family: 'Quantico';
  }

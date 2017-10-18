@@ -46,7 +46,7 @@ class ImageHubble extends Component {
 				<Row>
 					<Col xs={12} sm={12} md={12}>
 						<div className="form-group row">
-							<label htmlFor="example-date-input" className="col-2 col-form-label">Date</label>
+							<h2 htmlFor="example-date-input" className="col-2 col-form-label" >Date</h2>
 							<div className="col-10">
 								<form >
 								<input className="form-control" type="date" onChange={this.handleChange} id="example-date-input"/>
