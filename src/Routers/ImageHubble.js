@@ -6,7 +6,6 @@ import DetailsImage from '../components/DetailsImage'
 
 class ImageHubble extends Component {
 	constructor (props){
-		console.log(props)
 		super(props)
 		this.state =  {
 			date: '',
@@ -19,14 +18,14 @@ class ImageHubble extends Component {
 	}
 	
 	updateData( dateSelected ) {
-		getImageHubble(  dateSelected )
+		getImageHubble( dateSelected )
 			.then(data => {
-				this.setState({
-					date: data.date, 
-					explanation: data.explanation,
-					hdurl:data.hdurl,
-					title: data.title
-				})	
+					this.setState({
+						date: data.date, 
+						explanation: data.explanation,
+						hdurl:data.hdurl,
+						title: data.title
+					})	
 			})		
 	}
 
@@ -40,7 +39,6 @@ class ImageHubble extends Component {
 	}
 	
 	render () {
-
 		return(
 			<Grid>
 				<Row>
@@ -61,7 +59,6 @@ class ImageHubble extends Component {
 			</Grid>
 		)
 	}
-
 }
 
 export default ImageHubble
