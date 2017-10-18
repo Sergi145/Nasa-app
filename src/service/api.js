@@ -31,8 +31,6 @@ export const getAsteroid = (date) => {
 export const getIdAsteroid=(idAsteroid)=>{
 	const urlGetId=`https://api.nasa.gov/neo/rest/v1/neo/${idAsteroid}?api_key=${apiKey}`
 	return axios.get(urlGetId)
-		.then ((data) => {
-			console.log(data.data) 
-		})			
+	.then((data => data.data ) )		
 }
 

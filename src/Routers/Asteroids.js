@@ -7,7 +7,7 @@ const detailsPerDate = event => {
 	const { neo_reference_id, name } = event
 	return (
 		<li key={ neo_reference_id }>
-			<Link to={`/asteroid/:${neo_reference_id}`}>
+			<Link to={`/getAsteroid/${neo_reference_id}`}>
 				{ name }
 			</Link>
 		</li>
@@ -20,16 +20,15 @@ class Asteroids extends Component {
 		console.log(props)
 		super(props)
 		this.state = {
-			date: '2017-10-14',
+			date: '',
 			dataPerDate: null
 		}
 		this.updateDatesRange = this.updateDatesRange.bind(this)
-		
 	}
 
 	updateDatesRange( date ) {
 		getAsteroid(date, date)
-			.then( response =>{
+			.then( response => {
 				const { near_earth_objects } = response.data
 				this.setState({
 					dataPerDate: near_earth_objects[date]
@@ -47,10 +46,10 @@ class Asteroids extends Component {
 	}
 
 	render() {
-		console.log("render...")
+		let length = ''
 		const { date, dataPerDate } = this.state
 		if (dataPerDate) {
-			console.log(dataPerDate)
+			 length = dataPerDate.length
 		}
 		
 		return (
@@ -58,14 +57,13 @@ class Asteroids extends Component {
 				<form >
 					<input className="form-control" type="date" onChange={this.handleChange} id="example-date-input"/>
 				</form>
-				<h1>Asteroids</h1>
+				<h1>{`En el día que has seleccionado orbitaron ${length} Asteroides`}</h1>
 				<ul>
 					{
 						dataPerDate && 
 						dataPerDate.map( eventData => detailsPerDate(eventData) )
 					}
 				</ul>
-				
 			</div>
 		) 
 	}

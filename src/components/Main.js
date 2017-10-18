@@ -13,11 +13,11 @@ const Main = () => (
 	<div className="Main">
 		<Switch>
 			<Route exact path='/' component={Home}/>
-			<Route  path='/image' component={ImageHubble}/>
-			<Route  path='/asteroid' component={Asteroids}/>
-			<Route  path='/asteroid/:idAsteroid' component={InfoAsteroid}/>
-			<Route  path='/curiosity' component={Curiosity}/>
-			<Route  path='/wallpaper' component={SearchWallPaper}/>
+			<Route path='/image' component={ImageHubble}/>
+			<Route path='/asteroid' component={Asteroids}/>
+			<Route path='/getAsteroid/:idAsteroid' component={InfoAsteroid}/>
+			<Route path='/curiosity' component={Curiosity}/>
+			<Route path='/wallpaper' component={SearchWallPaper}/>
 		</Switch>  
 
 	</div>
