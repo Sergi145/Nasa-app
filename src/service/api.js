@@ -8,7 +8,7 @@
 // https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=2015-09-08&api_key=DEMO_KEY
 
 // url fotos Rover Curiosity
-// https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=2&api_key=DEMO_KEY
+// https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=1&api_key=DEMO_KEY
 
 import axios from 'axios'
 const apiKey = 'reR7Xu4UezP8ZOXz1zsjhdh6Cn5aJwxulUyRh13S'
@@ -28,9 +28,16 @@ export const getAsteroid = (date) => {
 	})
 }
 
-export const getIdAsteroid=(idAsteroid)=>{
+export const getIdAsteroid=(idAsteroid) => {
 	const urlGetId=`https://api.nasa.gov/neo/rest/v1/neo/${idAsteroid}?api_key=${apiKey}`
 	return axios.get(urlGetId)
-	.then((data => data.data ) )		
+		.then(data => data.data )		
 }
 
+export const getCuriosity = () => {
+	const urlCuriosity = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=1&api_key=${apiKey}`
+	return axios.get(urlCuriosity)
+		.then(data => data.data)
+			
+		
+}
