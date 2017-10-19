@@ -35,9 +35,6 @@ export const getIdAsteroid=(idAsteroid) => {
 		.then(data => data.data )		
 }
 
-<<<<<<< HEAD
-
-=======
 export const getCuriosity = () => {
 	const urlCuriosity = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=1&api_key=${apiKey}`
 	return axios.get(urlCuriosity)
@@ -45,4 +42,4 @@ export const getCuriosity = () => {
 			
 		
 }
->>>>>>> b9faa985503c02ff9b3b45c51b4befda5e2533b2
+
