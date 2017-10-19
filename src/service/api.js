@@ -21,14 +21,18 @@ export const getImageHubble = (query) => {
 		
 }
 
-//export const getAsteroides=(star_date,start_end)=>{
 
-	//const urlAsteroids=` https://api.nasa.gov/neo/rest/v1/feed?start_date=${star_date}&end_date=${star_end}&api_key=${apiKey}`
+export const getAsteroid = (date) => {
+	const urlAsteroid = `https://api.nasa.gov/neo/rest/v1/feed?start_date=${date}&end_date=${date}&api_key=${apiKey}`
+	return axios.get(urlAsteroid).then((data)=>{
+		return data
+	})
+}
 
-		//return axios.get(urlAsteroids)
-			//.then((data=>{return console.log(data)}))
+export const getIdAsteroid=(idAsteroid)=>{
+	const urlGetId=`https://api.nasa.gov/neo/rest/v1/neo/${idAsteroid}?api_key=${apiKey}`
+	return axios.get(urlGetId)
+	.then((data => data.data ) )		
+}
 
-
-
-//}
 
