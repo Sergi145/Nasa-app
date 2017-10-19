@@ -25,8 +25,6 @@ class Curiosity extends Component {
 						})
 					})
 				})
-        
-				console.log(data.photos[0])
 			})
 	}
 	render() {

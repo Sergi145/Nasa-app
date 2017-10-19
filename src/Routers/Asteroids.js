@@ -1,16 +1,23 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { getAsteroid } from '../service/api'
+
 import { defaultDay } from '../service/utiles'
+
+import '../styles/Home.css'
+// import { getIdAsteroid } from '../service/api'
 
 const detailsPerDate = event => {
 	const { neo_reference_id, name } = event
 	return (
+
 		<li key={ neo_reference_id }>
-			<Link to={`/getAsteroid/${neo_reference_id}`}>
+			<Link id="lista" to={`/getAsteroid/${neo_reference_id}`}>
 				{ name }
 			</Link>
 		</li>
+
+	
 	) 
 }
 
@@ -46,18 +53,24 @@ class Asteroids extends Component {
 
 	render() {
 		let length = ''
-		const { dataPerDate } = this.state
+		let title=''
+		const { date, dataPerDate } = this.state
 		if (dataPerDate) {
 			 length = dataPerDate.length
+			title=`En el día que has seleccionado orbitaron ${length} Asteroides`		
 		}
+
+
 		
 		return (
 			<div className="Asteroids">
 				<form >
 					<input className="form-control" type="date" onChange={this.handleChange} id="example-date-input"/>
 				</form>
-				<h1>{`En el día que has seleccionado orbitaron ${length} Asteroides`}</h1>
+				
+					<h1>{title}</h1>
 				<ul>
+			
 					{
 						dataPerDate && 
 						dataPerDate.map( eventData => detailsPerDate(eventData) )

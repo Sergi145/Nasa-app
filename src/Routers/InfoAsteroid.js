@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { getIdAsteroid } from '../service/api'
 import { Thumbnail } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import '../styles/Home.css'
 
 class InfoAsteroid extends Component {
 	constructor(props) {
@@ -41,18 +42,32 @@ class InfoAsteroid extends Component {
 	render() {
 		const label = this.state.is_potentially_hazardous ? 'Este meteorito es potencialmente peligroso!! 💀' : 'Tranquilos este meteorito es inofensivo 😅'
 		return (
-			<div>
-				<h3>{this.state.name}</h3>
-				<Thumbnail src='http://cadenaser00.epimg.net/ser/imagenes/2017/04/05/ciencia/1491388366_395854_1491388813_noticia_normal.jpg' >
-					<p>{`El tamaño estimado de este Asteroide va desde ${this.state.estimated_diameter_min} Km, hasta los ${this.state.estimated_diameter_max} Km`}</p>
+			<div className="container">
+		
+					
+				<div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            		<div className="box">
+                	<div className="box-icon">
+                    	<span className="fa fa-4x fa-css3"></span>
+                </div>
+                <div className="info">
+                    <h4 className="text-center">{this.state.name}</h4>
+                  	<p>{`El tamaño estimado de este Asteroide va desde ${this.state.estimated_diameter_min} Km, hasta los ${this.state.estimated_diameter_max} Km`}</p>
 					<p>{`Viaja a una velocidad de ${this.state.velocity} Km/seg`}</p>
 					<p>{`La fecha que más cerca estuvo de la Tierra fue ${this.state.approach} y pasó a ${this.state.distance_min} Km`}</p>
 					<p>{`El cuerpo celeste sobre el que orbita es: ${this.state.orbiting_body}`}</p>
 					<p>{label}</p>
-					<Link to='/asteroid'>Back</Link>
-				</Thumbnail>
+					<Link to='/asteroid'  className="btn">Back</Link>
+
+                	</div>
+            	</div>
+        	</div>
+				
 				
 			</div>
+
+
+		
 
 
 
