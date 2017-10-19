@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { getIdAsteroid } from '../service/api'
 import { Thumbnail } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 class InfoAsteroid extends Component {
 	constructor(props) {
@@ -49,7 +50,9 @@ class InfoAsteroid extends Component {
 					<p>{`La fecha que más cerca estuvo de la Tierra fue ${this.state.approach} y pasó a ${this.state.distance_min} Km`}</p>
 					<p>{`El cuerpo celeste sobre el que orbita es: ${this.state.orbiting_body}`}</p>
 					<p>{label}</p>
+					<Link to='/asteroid'>Back</Link>
 				</Thumbnail>
+				
 			</div>
 
 
