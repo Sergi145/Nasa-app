@@ -38,15 +38,13 @@ class Curiosity extends Component {
             	return (
             	
             		<Col xs={12} sm={6} md={3} key={i}>
-            			
             			<Thumbnail
-
             				src={photo.image} 
             				key={i} 
             			>
             				<h5>{`Nombre de la sonda: ${photo.rover_name}`}</h5>
-            				<p>{photo.date_launch}</p>
-            				<p>{photo.date_landing}</p>
+            				<p>{`Fecha de lanzamiento: ${photo.date_launch}`}</p>
+            				<p>{`Fecha de aterrizaje: ${photo.date_landing}`}</p>
             			</Thumbnail>
             		</Col>
             	)

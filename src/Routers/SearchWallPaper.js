@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { getImageHubble } from '../service/api'
-import { Grid, Row, Col }  from 'react-bootstrap'
+import { Grid, Row, Col, Thumbnail }  from 'react-bootstrap'
 
 class WallPaper extends Component {
 	constructor (props) {
@@ -37,12 +37,19 @@ class WallPaper extends Component {
 					{
 						this.state.wallpapers.length &&
 						this.state.wallpapers.map((wallpaper, i)  => {
-							return (
-								<Col xs={12} sm={6} md={3} key={i}>
-									<img src={wallpaper.hdurl} alt="" />
-									<a href={wallpaper.hdurl}>{wallpaper.hdurl}</a>
-								</Col>
-							)
+							 if (wallpaper.hdurl)
+							 	return (
+									<Col xs={12} sm={6} md={3} key={i}>
+										<a href={wallpaper.hdurl}>
+											<Thumbnail
+												src={wallpaper.hdurl} 
+												key={i} 
+											>
+												<h5>{wallpaper.title}</h5>
+											</Thumbnail>
+										</a>
+									</Col>
+								)
 						})
 					}
 				</Row>
