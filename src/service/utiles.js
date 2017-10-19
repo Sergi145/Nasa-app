@@ -12,10 +12,8 @@ export const defaultDay = () => {
 		Oct: '10',
 		Nov: '11',
 		Dec: '12'
-  }
-  
-  const date = new Date().toString().split(' ')
-  const queryDate = `${date[3]}-${dictionary[date[1]]}-${date[2]}`
-  return queryDate
-
+	}
+	const date = new Date().toString().split(' ')
+	const queryDate = `${date[3]}-${dictionary[date[1]]}-${date[2]}`
+	return queryDate
 }
