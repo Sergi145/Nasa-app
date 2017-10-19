@@ -6,7 +6,6 @@ import '../styles/Home.css'
 
 class InfoAsteroid extends Component {
 	constructor(props) {
-		console.log(props)
 		super(props)
 		this.state = {
 			name:'',
@@ -22,7 +21,7 @@ class InfoAsteroid extends Component {
 	upIdAsteroid (idAsteroid){
 		getIdAsteroid(idAsteroid)
 			.then ((data) => {
-				console.log(data.close_approach_data)
+				
 				 this.setState({
 					 name: data.name,
 					 estimated_diameter_min: data.estimated_diameter.kilometers.estimated_diameter_min,

@@ -21,7 +21,6 @@ const detailsPerDate = event => {
 
 class Asteroids extends Component {
 	constructor(props) {
-		console.log(props)
 		super(props)
 		this.state = {
 			date: '',
@@ -53,7 +52,7 @@ class Asteroids extends Component {
 		let length = ''
 		let title=''
 		const { date, dataPerDate } = this.state
-
+		const { dataPerDate } = this.state
 		if (dataPerDate) {
 			 length = dataPerDate.length
 			title=`En el día que has seleccionado orbitaron ${length} Asteroides`		
