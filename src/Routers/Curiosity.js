@@ -36,13 +36,15 @@ class Curiosity extends Component {
 						this.state.photos.length &&
             this.state.photos.map((photo,i) => {
             	return (
+            	
             		<Col xs={12} sm={6} md={3} key={i}>
-            			<Thumbnail 
+            			
+            			<Thumbnail
+
             				src={photo.image} 
             				key={i} 
-            				alt="242x200"
             			>
-            				<h3>{`Nombre de la sonda: ${photo.rover_name}`}</h3>
+            				<h5>{`Nombre de la sonda: ${photo.rover_name}`}</h5>
             				<p>{photo.date_launch}</p>
             				<p>{photo.date_landing}</p>
             			</Thumbnail>

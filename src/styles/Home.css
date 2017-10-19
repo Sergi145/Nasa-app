@@ -29,22 +29,31 @@ a:hover{
 	font-size: 23px;
 }
 
-#planet {
 
-  
-}
 
-img{
+.img-rounded{
+  width: 60px;
 	height: 60px;
 	margin-right: 15px;
 }
 
+h1{
+   font-family: 'Quantico', sans-serif;
+   text-align: center;
+}
+
 h3{
 	color: white;
+    font-family: 'Quantico', sans-serif;
 }
 
 h2{
   color: #ef3d43;
+    font-family: 'Quantico', sans-serif;
+}
+
+h5,p{
+    font-family: 'Quantico', sans-serif;
 }
 
 .titulo{
@@ -331,6 +340,7 @@ and (max-device-width : 480px) {
 
   h4{
   	text-align: left;
+      font-family: 'Quantico', sans-serif;
   }
  
 }
@@ -340,7 +350,8 @@ footer {
   color: rgb(255, 255, 255);
   padding: 20px;
   margin-top: 15px;
-  
+
+
 
  }
 
@@ -396,9 +407,7 @@ footer {
 }
 
 
-.box-icon:hover{
 
-}
 
 
 .box-icon span {
@@ -437,3 +446,10 @@ footer {
 
 
 }
+
+img{
+  width: 400px;
+  max-height: 220px;
+}
+
+
