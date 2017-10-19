@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { getAsteroid } from '../service/api'
-// import { getIdAsteroid } from '../service/api'
+import { defaultDay } from '../service/utiles'
 
 const detailsPerDate = event => {
 	const { neo_reference_id, name } = event
@@ -19,7 +19,7 @@ class Asteroids extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			date: '',
+			date: defaultDay(),
 			dataPerDate: null
 		}
 		this.updateDatesRange = this.updateDatesRange.bind(this)
