@@ -36,7 +36,7 @@ class WallPaper extends Component {
 				<Row>
 					{
 						this.state.wallpapers.length &&
-						this.state.wallpapers.map((wallpaper, i)  => {
+						this.state.wallpapers.map((wallpaper, i) => {
 							 if (wallpaper.hdurl)
 							 	return (
 									<Col xs={12} sm={6} md={3} key={i}>

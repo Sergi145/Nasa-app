@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { getIdAsteroid } from '../service/api'
-import { Thumbnail } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import '../styles/Home.css'
 
@@ -14,7 +13,8 @@ class InfoAsteroid extends Component {
 			estimated_diameter_max:'',
 			velocity: '',
 			approach: '',
-			distance_min: ''		
+			distance_min: '',
+			urlNasa: ''		
 		}
 		this.upIdAsteroid = this.upIdAsteroid.bind(this)
 	}
@@ -30,7 +30,8 @@ class InfoAsteroid extends Component {
 					 velocity: data.close_approach_data[0].relative_velocity.kilometers_per_second,
 					 approach: data.close_approach_data[0].close_approach_date,
 					 distance_min: data.close_approach_data[0].miss_distance.kilometers,
-					 orbiting_body: data.close_approach_data[0].orbiting_body
+					 orbiting_body: data.close_approach_data[0].orbiting_body,
+					 urlNasa:data.nasa_jpl_url
 				 })
 			})			
 	}
@@ -40,6 +41,7 @@ class InfoAsteroid extends Component {
 		this.upIdAsteroid(idAsteroid)
 	}
 	render() {
+		
 		const label = this.state.is_potentially_hazardous ? 'Este meteorito es potencialmente peligroso!! 💀' : 'Tranquilos este meteorito es inofensivo 😅'
 		return (
 			<div className="container">
@@ -49,15 +51,16 @@ class InfoAsteroid extends Component {
             		<div className="box">
                 	<div className="box-icon">
                     	<span className="fa fa-4x fa-css3"></span>
-                </div>
-                <div className="info">
-                    <h4 className="text-center">{this.state.name}</h4>
+						</div>
+						<div className="info">
+							<h4 className="text-center">{this.state.name}</h4>
                   	<p>{`El tamaño estimado de este Asteroide va desde ${this.state.estimated_diameter_min} Km, hasta los ${this.state.estimated_diameter_max} Km`}</p>
-					<p>{`Viaja a una velocidad de ${this.state.velocity} Km/seg`}</p>
-					<p>{`La fecha que más cerca estuvo de la Tierra fue ${this.state.approach} y pasó a ${this.state.distance_min} Km`}</p>
-					<p>{`El cuerpo celeste sobre el que orbita es: ${this.state.orbiting_body}`}</p>
-					<p>{label}</p>
-					<Link to='/asteroid'  className="btn">Back</Link>
+							<p>{`Viaja a una velocidad de ${this.state.velocity} Km/seg`}</p>
+							<p>{`La fecha que más cerca estuvo de la Tierra fue ${this.state.approach} y pasó a ${this.state.distance_min} Km`}</p>
+							<p>{`El cuerpo celeste sobre el que orbita es: ${this.state.orbiting_body}`}</p>
+							<p>{label}</p>
+							<a href={this.state.urlNasa}>MORE INFORMATION</a>
+							<Link to='/asteroid'  className="btn">Back</Link>
 
                 	</div>
             	</div>

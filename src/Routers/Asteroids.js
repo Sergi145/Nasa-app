@@ -37,6 +37,7 @@ class Asteroids extends Component {
 			.then( response => {
 				const { near_earth_objects } = response.data
 				this.setState({
+					date,
 					dataPerDate: near_earth_objects[date]
 				})
 			})
@@ -53,19 +54,21 @@ class Asteroids extends Component {
 
 	render() {
 		let length = ''
-		let title=''
-		const { date, dataPerDate } = this.state
+		
+		const { dataPerDate } = this.state
 		if (dataPerDate) {
-			 length = dataPerDate.length
-			title=`En el día que has seleccionado orbitaron ${length} Asteroides`		
+			length = dataPerDate.length
 		}
-
+		console.log(this.state.date)
+		console.log(defaultDay())
+		console.log(this.state.date === defaultDay())
+		const title = this.state.date === defaultDay() ? `Today there are ${length} asteroids orbiting the Earth` : `On the day you selected orbited ${length} asteroids the Earth `
 
 		
 		return (
 			<div className="Asteroids">
 				<form >
-					<input className="form-control" type="date" onChange={this.handleChange} id="example-date-input"/>
+					<input className="form-control" value={this.state.value} type="date" onChange={this.handleChange} id="example-date-input"/>
 				</form>
 				
 					<h1>{title}</h1>
