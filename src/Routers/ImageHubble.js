@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { getImageHubble } from '../service/api'
 import { Grid, Row, Col }  from 'react-bootstrap'
 import DetailsImage from '../components/DetailsImage'
+import '../styles/ImageHubble.css'
 
 
 class ImageHubble extends Component {
