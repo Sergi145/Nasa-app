@@ -42,9 +42,9 @@ class Curiosity extends Component {
             				src={photo.image} 
             				key={i} 
             			>
-            				<h5>{`Nombre de la sonda: ${photo.rover_name}`}</h5>
-            				<p>{`Fecha de lanzamiento: ${photo.date_launch}`}</p>
-            				<p>{`Fecha de aterrizaje: ${photo.date_landing}`}</p>
+            				<h5>{`Name of the probe: ${photo.rover_name}`}</h5>
+            				<p>{`Release date: ${photo.date_launch}`}</p>
+            				<p>{`Date of landing: ${photo.date_landing}`}</p>
             			</Thumbnail>
             		</Col>
             	)

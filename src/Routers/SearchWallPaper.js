@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { getImageHubble } from '../service/api'
 import { Grid, Row, Col, Thumbnail }  from 'react-bootstrap'
 
+
 class WallPaper extends Component {
 	constructor (props) {
 		super(props)
@@ -41,11 +42,11 @@ class WallPaper extends Component {
 							 	return (
 									<Col xs={12} sm={6} md={3} key={i}>
 										<a href={wallpaper.hdurl}>
-											<Thumbnail
+											<Thumbnail className="thumbnail2"
 												src={wallpaper.hdurl} 
 												key={i} 
 											>
-												<h5>{wallpaper.title}</h5>
+												<h6>{wallpaper.title}</h6>
 											</Thumbnail>
 										</a>
 									</Col>
