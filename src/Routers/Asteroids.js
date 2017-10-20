@@ -57,7 +57,7 @@ class Asteroids extends Component {
 		const { date, dataPerDate } = this.state
 		if (dataPerDate) {
 			 length = dataPerDate.length
-			title=`En el día que has seleccionado orbitaron ${length} Asteroides`		
+			title=`On the day you selected orbited ${length} Asteroids`		
 		}
 
 

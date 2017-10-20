@@ -9,7 +9,7 @@ const Home = () => {
 				<div className="container">
 					<div className="row">
 						<div className="col-md-12">
-							<h3 className="titulo">Información del proyecto front-end</h3>
+							<h3 className="titulo">Front-end project information</h3>
 						</div>
 					</div>
 				</div>
