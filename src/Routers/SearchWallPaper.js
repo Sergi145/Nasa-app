@@ -38,8 +38,8 @@ class WallPaper extends Component {
 					{
 						this.state.wallpapers.length &&
 						this.state.wallpapers.map((wallpaper, i) => {
-							 if (wallpaper.hdurl)
-							 	return (
+   					 if (wallpaper.hdurl)
+	 					 	return (
 									<Col xs={12} sm={6} md={3} key={i}>
 										<a href={wallpaper.hdurl}>
 											<Thumbnail className="thumbnail2"
