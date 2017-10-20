@@ -453,7 +453,7 @@ div.thumbnail2{
 }
 
 div.thumbnail2 img{
-  
+  width: 10px;
     width: 330px;
   height: 283px;
 }
