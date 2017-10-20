@@ -41,7 +41,6 @@ class InfoAsteroid extends Component {
 		this.upIdAsteroid(idAsteroid)
 	}
 	render() {
-		const label = this.state.is_potentially_hazardous ? 'Este meteorito es potencialmente peligroso!! 💀' : 'Tranquilos este meteorito es inofensivo 😅'
 		const label = this.state.is_potentially_hazardous ? 'This meteorite is potentially dangerous!! 💀' : 'Calm this meteorite is harmless 😅'
 		return (
 			<div className="container">
@@ -50,18 +49,9 @@ class InfoAsteroid extends Component {
 				<div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             		<div className="box">
                 	<div className="box-icon">
-                    	<span className="fa fa-4x fa-css3"></span>
+                 
 						</div>
-						<div className="info">
-							<h4 className="text-center">{this.state.name}</h4>
-                  	<p>{`El tamaño estimado de este Asteroide va desde ${this.state.estimated_diameter_min} Km, hasta los ${this.state.estimated_diameter_max} Km`}</p>
-							<p>{`Viaja a una velocidad de ${this.state.velocity} Km/seg`}</p>
-							<p>{`La fecha que más cerca estuvo de la Tierra fue ${this.state.approach} y pasó a ${this.state.distance_min} Km`}</p>
-							<p>{`El cuerpo celeste sobre el que orbita es: ${this.state.orbiting_body}`}</p>
-							<p>{label}</p>
-							<a href={this.state.urlNasa}>MORE INFORMATION</a>
-							<Link to='/asteroid'  className="btn">Back</Link>
-                </div>
+						
                 <div className="info">
                     <h4 className="text-center">{this.state.name}</h4>
                   	<p>{`The estimated size of this Asteroid ranges from ${this.state.estimated_diameter_min} Km, until the ${this.state.estimated_diameter_max} Km`}</p>

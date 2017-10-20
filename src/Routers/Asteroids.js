@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import 
+React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import { getAsteroid } from '../service/api'
 
@@ -58,7 +59,7 @@ class Asteroids extends Component {
 		const { dataPerDate } = this.state
 		if (dataPerDate) {
 			length = dataPerDate.length
-			title=`On the day you selected orbited ${length} Asteroids`		
+			const title=`On the day you selected orbited ${length} Asteroids`		
 		}
 		console.log(this.state.date)
 		console.log(defaultDay())
