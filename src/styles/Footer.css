@@ -1,0 +1,22 @@
+/* .social i {
+    width: 40px;
+    height: 40px;
+    color: #FFF;
+    background-color: #909AA0;
+    font-size: 22px;
+    text-align:center;
+    padding-top: 12px;
+    border-radius: 50%;
+    transition: all ease 0.3s;
+} */
+
+.social i:hover {
+    color: #FFF;
+    text-decoration: none;
+    transition: all ease 0.3s;
+
+}
+
+.social .fa-github:hover {
+    background: #343434;
+}

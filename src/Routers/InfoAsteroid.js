@@ -54,7 +54,7 @@ class InfoAsteroid extends Component {
                     <h4 className="text-center">{this.state.name}</h4>
                   	<p>{`The estimated size of this Asteroid ranges from ${this.state.estimated_diameter_min} Km, until the ${this.state.estimated_diameter_max} Km`}</p>
 					<p>{`Travel at a speed of ${this.state.velocity} Km/seg`}</p>
-					<p>{`The closest date to Earth was ${this.state.approach}and happened to ${this.state.distance_min} Km`}</p>
+					<p>{`The closest date to Earth was ${this.state.approach} and happened to ${this.state.distance_min} Km`}</p>
 					<p>{`The celestial body on which orbit is: ${this.state.orbiting_body}`}</p>
 					<p>{label}</p>
 					<Link to='/asteroid'  className="btn">Back</Link>
